@@ -21,3 +21,12 @@ chmod +x build_bench_hw_vm.sh              # once, if it isn't already executabl
 ```
 
 You should see a "DONE!" if the tests pass. 
+
+#Important files to look at
+- viterb00.c : where all of the benchmark functions exist - we will introduce the new ISA instruction inside `computeACSLoop` function.
+  This specific part: 
+  ```
+  g_acs_survivors[s] = hw_run_column(hard_symbol(EncodedStreamPtr[s]));
+  ```
+- bmark.c: runs Viterbi decoder on a loop for the tests 
+
