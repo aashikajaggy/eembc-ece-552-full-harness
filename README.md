@@ -20,3 +20,4 @@ chmod +x build_bench_hw_vm.sh              # once, if it isn't already executabl
 ./build_bench_hw_vm.sh 4    # zeros   (expect CRC 0x0000)
 ```
 
+You should see a "DONE!" if the tests pass. 
