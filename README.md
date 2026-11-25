@@ -22,7 +22,7 @@ chmod +x build_bench_hw_vm.sh              # once, if it isn't already executabl
 
 You should see a "DONE!" if the tests pass. 
 
-#Important files to look at
+# Important files to look at
 - viterb00.c : where all of the benchmark functions exist - we will introduce the new ISA instruction inside `computeACSLoop` function.
   This specific part: 
   ```
