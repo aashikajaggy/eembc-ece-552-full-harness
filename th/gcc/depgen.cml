@@ -1,0 +1,36 @@
+# ============================================================================
+#
+# Copyright (C) EEMBC(R) All Rights Reserved
+#
+# This software is licensed with an Acceptable Use Agreement under Apache 2.0.
+# Please refer to the license file (LICENSE.md) included with this code.
+#
+# ============================================================================
+
+## Built from Application Root (th/src,th/$(TOOLCHAIN)/al)
+# Harness Library Build
+
+
+# Applies to harness
+# Executed from Makefile, paths must be adjusted
+-tf ../th/gcc/harness.mak
+-b $(OBJ)
+-o $(OBJBUILD)
+-r "$(COM)"
+-co $(OBJOUT)
+-to $(OBJBUILD)
+-tb $(LITE)$(LIBTYPE)
+-tr "$(LIBRARY)"
+-ce $(LIBOUT)
+
+# The Regular Harness
+-t thobjs
+-I../th/x86/al
+-I../th/src
+-I.
+
+../th/x86/al/*.c
+../th/src/*.c
+
+-td  # dump the th regular thobjs, 
+

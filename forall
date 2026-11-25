@@ -1,0 +1,26 @@
+# ============================================================================
+#
+# Copyright (C) EEMBC(R) All Rights Reserved
+#
+# This software is licensed with an Acceptable Use Agreement under Apache 2.0.
+# Please refer to the license file (LICENSE.md) included with this code.
+#
+# ============================================================================
+
+called=$1
+if [ -z "$called" ]; then 
+called="techtag.sh"
+fi
+# top level section
+if [ $called = "techtag.sh" ]; then
+cvs -Q checkout -PAd th eembc2/techtag/th
+cvs -Q checkout -PAd th_lite eembc2/techtag/th_lite
+cvs -Q checkout -PAd util eembc2/techtag/util
+fi
+
+applications="8_16-bit automotive consumer networking office telecom"
+
+for i in $applications; do 
+cd $i;../$called $2;cd ..
+done
+

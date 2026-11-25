@@ -1,0 +1,36 @@
+# ============================================================================
+#
+# Copyright (C) EEMBC(R) All Rights Reserved
+#
+# This software is licensed with an Acceptable Use Agreement under Apache 2.0.
+# Please refer to the license file (LICENSE.md) included with this code.
+#
+# ============================================================================
+
+## Built from Application Root (../th_lite/src,../th_lite/$(TOOLCHAIN)/al)
+# Harness Library Build
+
+
+# Applies to harness
+-cq
+-tf ../th_lite/vc/harness.mak
+-b $(OBJ)
+-o $(OBJBUILD)
+-r "$(COM)"
+-co $(OBJOUT)
+-to $(OBJBUILD)
+-tb $(LITE)$(LIBTYPE)
+-tr "$(LIBRARY)"
+-ce $(LIBOUT)
+
+# The Lite Harness
+-t thobjs
+-I../th_lite/x86/al
+-I../th_lite/src
+-I.
+
+../th_lite/x86/al/*.c
+../th_lite/src/*.c
+
+-td  # dump the th Lite thobjs, 
+
