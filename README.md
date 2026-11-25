@@ -2,7 +2,7 @@
 The verilator-and-hamming branch contains ...
 - modifications for the hamming distance calculation
 - modifications to the EEMBC benchmark to compute output table, metric table (PRE-ACS), perform ACS loop with Verilated RTL, and traceback
-- Verilated RTL files in a folder called `obj_dir`
+- Verilated RTL files in a folder called `obj_dir` in `ece-552-viterbi-decoder/viterb00`
 
 # Requirements to test
 Need to install Verilator, I followed the guide here (I recommend using an ubuntu VM):
